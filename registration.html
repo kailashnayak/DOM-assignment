@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" placeholder="name" id="name">
+	<select id="gender"> 
+		<option value="">Select Gender</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" placeholder="email" id="email">
+	<input type="text" placeholder="mobile" id="mobile">
+	<hr>
+    
+        <h1 id="dName">NAME</h1>
+        <h2 id="dGender">GENDER</h2>
+        <h3 id="dEmail">EMAIL</h3>
+        <h4 id="dMobile">MOBILE</h4>
+   
+	
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+            let names=document.getElementById("dName")
+            let nam=document.getElementById("name")
+                names.innerText=nam.value
+            
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+            let sex=document.getElementById("dGender")
+            let gen=document.getElementById("gender")
+            sex.innerText=gen.value
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+            let mail=document.getElementById("dEmail")
+            let mail1=document.getElementById("email")
+            mail.innerText=mail1.value
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+            let mob=document.getElementById("dMobile")
+            let mob1=document.getElementById("mobile")
+            mob.innerText=mob1.value
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+            let nam=document.getElementById("name")
+            nam.value=""
+
+            let gen=document.getElementById("gender")
+            gen.value=""
+        
+            let mail1=document.getElementById("email")
+            mail1.value=""   
+
+            let mob1=document.getElementById("mobile")
+            mob1.value=""
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+            let names=document.getElementById("dName")
+            dName.innerText="NAME"
+
+            let sex=document.getElementById("dGender")
+            dGender.innerText="GENDER"
+
+            let mail=document.getElementById("dEmail")
+            dEmail.innerText="EMAIL"
+
+            let mob=document.getElementById("dMobile")
+            dMobile.innerText="MOBILE"
+		}
+	</script>
+</body>
+</html>
